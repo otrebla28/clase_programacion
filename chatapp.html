@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat app</title>
+    <link rel="stylesheet" href="stylechatapp.css">
+    <script>
+       function duplicate(){
+            var str_html='';
+           var deb =document.querySelector('.copy').innerHTML;
+           str_html+=deb;
+           console.log(str_html) //grabar en consola
+           document.querySelector('body').innerHTML += str_html;
+
+       }
+
+       function activetab(){
+           var tabestados=document.querySelectorAll('#bottom-line');
+           for(var i=0; i<tabestados.length; i++){
+               tabestados[i].style.borderBottom = '3px solid green';
+               
+           }
+           console.log(tabestados[i]);
+
+           tabestados[1].style.borderBottom = '3px solid white';
+       }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="appname" onclick="duplicate()">ChatApp</div>
+        <div class="space"></div>
+        <div class="search">S</div>
+        <div class="submenu">SM</div>
+    </div>
+    <div class="menu">
+        <div class="camera">C</div>
+        <div id="bottom-line" class="chats">Chats</div>
+        <div id="bottom-line" class="estados" onclick="activetab()">Estados</div>
+        <div id="bottom-line" class="llamadas">Llamadas</div>
+    </div>
+    <div class="copy">  
+    <div class="row">
+        <div class="icon">
+            <img src="black-power-button-1428134_640.png" height="30px" width="30px" alt="icono">
+        </div>
+        <div class="content">
+            <div class="top-row">
+                <div class="chatname">ciencias</div>
+                <div class="timedate">7:30 a.m.</div>
+            </div>
+            <div class="botton-row">
+                <div class="contactname">Samuel: Buen día</div>
+                <div class="status">1</div>
+            </div>
+            
+        </div>
+    </div>
+</div> 
+    
+
+</body>
+</html>
