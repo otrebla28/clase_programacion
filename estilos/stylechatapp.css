@@ -83,7 +83,7 @@ los utilizo para personalizar el color del texto */
     transition-duration: .4s;
 }
 
-.row{
+.row, .rowE{
     display: flex;
     align-items: center;
     align-content: center;

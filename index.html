@@ -21,45 +21,57 @@
             <img src="img/settings.png" height="20px" width="6px" alt="settings">
         </div>
     </div>
+
     <div class="menu">
-        <div class="camera">
-            <img src="img/camera.png" height="20p" width="20px" alt="camera">
-        </div>
-        
-        <!--estoy usando la etiqueda "a" para poder referenciar a cada unas de las 3 páginas -->
-        <!--Chats, llamada index-->
-        <!--Estados-->
-        <!--Llamadas-->
-        <a id="link-chats" href="index.html">
+            <div class="camera">
+                <img src="img/camera.png" height="20p" width="20px" alt="camera">
+            </div>
             <div id="bottom-line" class="chats">Chats</div>
-          </a> 
-        
-        <a id="link-estados" href="estados.html">
-            <div id="bottom-line" class="estados" onclick="activetab()">Estados</div>
-        </a>
-        <!--Aquí aún no aplico la etiqueta "a"-->
-        <div id="bottom-line" class="llamadas">Llamadas</div>
+            <div id="bottom-line" class="estados"  onclick="showEhideChat()">Estados</div>
+           <div id="bottom-line" class="llamadas">Llamadas</div>
     </div>
     
     <div class="copy">  
-    <div class="row">
+        <div class="row">  <!--Fila de chats-->
+            <div class="icon">
+                <img src="img/black-power-button-1428134_640.png" height="30px" width="30px" alt="icono">
+            </div>
+                <div class="content">
+                    <div class="top-row">
+                        <div class="chatname">ciencias</div>
+                        <div class="timedate">7:30 a.m.</div>
+                    </div>
+                    <div class="botton-row">
+                        <div class="contactname">Samuel: Buen día</div>
+                        <div class="status">1</div>
+                    </div>
+                    
+                </div>
+        </div> <!--Fin de la Fila de chats-->
+</div> 
+  
+<div class="copy-e" style="display: none;">  
+    <div id="e-row"  class="rowE">  <!--Fila de estados-->
+         <!--Al utilizar la propiedad style, podemos decirle que se oculte al cargar la página-->
+          <!--Estoy usando las mismas clases de la fila de chats con la idea de tener los elementos 
+            en el mismo orden-->
         <div class="icon">
             <img src="img/black-power-button-1428134_640.png" height="30px" width="30px" alt="icono">
         </div>
-        <div class="content">
-            <div class="top-row">
-                <div class="chatname">ciencias</div>
-                <div class="timedate">7:30 a.m.</div>
+            <div class="content">
+                <div class="top-row">
+                    <div class="chatname">Estados</div>
+                    <div class="timedate">12:37 a.m.</div>
+                </div>
+                <div class="botton-row">
+                    <div class="contactname">Hugo: A ver una peli</div>
+                    <div class="status">1</div>
+                </div>
+                
             </div>
-            <div class="botton-row">
-                <div class="contactname">Samuel: Buen día</div>
-                <div class="status">1</div>
-            </div>
-            
-        </div>
-    </div>
+    </div> <!--Fin de la Fila de estados-->
 </div> 
-    
+     
 
 </body>
 </html>
