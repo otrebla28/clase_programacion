@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat app</title>
+    <link rel="stylesheet" href="estilos/stylechatapp.css">
+    <script src="script/script.js"></script>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+    
+</head>
+<body>
+    <div class="header">
+        <div class="appname" onclick="duplicate()">ChatApp</div>
+        <div class="space"></div>
+        <div class="search">
+            <img src="img/search.png" height="20px" width="20px" alt="search">
+        </div>
+        <div class="submenu">
+            <img src="img/settings.png" height="20px" width="6px" alt="settings">
+        </div>
+    </div>
+    <div class="menu">
+        <div class="camera">
+            <img src="img/camera.png" height="20p" width="20px" alt="camera">
+        </div>
+        
+        <!--estoy usando la etiqueda "a" para poder referenciar a cada unas de las 3 páginas -->
+        <!--Chats, llamada index-->
+        <!--Estados-->
+        <!--Llamadas-->
+        <a id="link-chats" href="index.html">
+            <div id="bottom-line" class="chats">Chats</div>
+          </a> 
+        
+        <a id="link-estados" href="estados.html">
+            <div id="bottom-line" class="estados" onclick="activetab()">Estados</div>
+        </a>
+        <!--Aquí aún no aplico la etiqueta "a"-->
+        <div id="bottom-line" class="llamadas">Llamadas</div>
+    </div>
+    
+    <div class="copy">  
+    <div class="row">
+        <div class="icon">
+            <img src="img/black-power-button-1428134_640.png" height="30px" width="30px" alt="icono">
+        </div>
+        <div class="content">
+            <div class="top-row">
+                <div class="chatname">ciencias</div>
+                <div class="timedate">7:30 a.m.</div>
+            </div>
+            <div class="botton-row">
+                <div class="contactname">Samuel: Buen día</div>
+                <div class="status">1</div>
+            </div>
+            
+        </div>
+    </div>
+</div> 
+    
+
+</body>
+</html>
