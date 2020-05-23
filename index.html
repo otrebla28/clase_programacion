@@ -26,9 +26,9 @@
             <div class="camera">
                 <img src="img/camera.png" height="20p" width="20px" alt="camera">
             </div>
-            <div id="bottom-line" class="chats">Chats</div>
+            <div id="bottom-line" class="chats" onclick="ShowChatsHideEyLL()">Chats</div>
             <div id="bottom-line" class="estados"  onclick="showEhideChat()">Estados</div>
-           <div id="bottom-line" class="llamadas">Llamadas</div>
+           <div id="bottom-line" class="llamadas" onclick="ShowCallHideCyE()">Llamadas</div>
     </div>
     
     <div class="copy">  
@@ -70,6 +70,29 @@
                 
             </div>
     </div> <!--Fin de la Fila de estados-->
+</div> 
+
+<!--Row para llamadas-->
+<div class="copy-c" style="display: none;">  
+    <div id="c-row"  class="rowC">  <!--Fila de estados-->
+         <!--Al utilizar la propiedad style, podemos decirle que se oculte al cargar la página-->
+          <!--Estoy usando las mismas clases de la fila de chats con la idea de tener los elementos 
+            en el mismo orden-->
+        <div class="icon">
+            <img src="img/black-power-button-1428134_640.png" height="30px" width="30px" alt="icono">
+        </div>
+            <div class="content">
+                <div class="top-row">
+                    <div class="chatname">Llamadas</div>
+                    <div class="timedate">19:51 p.m.</div>
+                </div>
+                <div class="botton-row">
+                    <div class="contactname">Alberto: A trabajar</div>
+                    <div class="status">1</div>
+                </div>
+                
+            </div>
+    </div> <!--Fin de la Fila de llamadas-->
 </div> 
      
 
