@@ -38,7 +38,7 @@ function activetabCall(){
     for(var i=0; i<tabestados.length; i++){
         tabestados[i].style.borderBottom = '3px solid green';
      }
-    console.log(tabestados[i]);
+    
     tabestados[2].style.borderBottom = '3px solid white';
 }
 
@@ -129,3 +129,28 @@ function ocultarCall(){
       mostrarCall();
       activetabCall();
   }
+
+  //Aquí implementamos la nueva función "al cargar"
+  document.addEventListener('DOMContentLoaded',function(){
+      document.querySelectorAll('#bottom-line').forEach(function (div) {
+          div.onclick=function(){
+              console.log(div.dataset.view)
+              //Aquí van las funciones
+              if(div.dataset.view=="chats"){
+                ShowChatsHideEyLL();
+              }
+             
+              if(div.dataset.view=="estados"){
+                showEhideChat();
+              }
+              
+              if(div.dataset.view=="llamadas"){
+                ShowCallHideCyE();
+              }
+              
+          };
+      });
+      window.onscroll=function(){
+          this.console.log(window.scrollY)
+      }
+  });
