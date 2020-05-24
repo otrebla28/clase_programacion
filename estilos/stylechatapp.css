@@ -82,7 +82,7 @@ los utilizo para personalizar el color del texto */
     flex: 3 1 auto;
     transition-duration: .4s;
 }
-/*Estas propiedades permiten que los 3 row tengan las mismas propiedades*/
+/*Estas propiedades permiten que los 3 row tengan las mismas caracteristica*/
 .row, .rowE, .rowC{
     display: flex;
     align-items: center;
