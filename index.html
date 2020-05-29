@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chat app</title>
     <link rel="stylesheet" href="estilos/stylechatapp.css">
-     <script src="script/script.js"></script>
-    <link rel="icon" href="img/favicon.png" type="image/png">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
 
+
+    <script src="script/script.js"></script>
+    <link rel="icon" href="img/favicon.png" type="image/png">
 
 
     
@@ -99,10 +106,37 @@
     </div> <!--Fin de la Fila de llamadas-->
 </div>
 </div> 
+<!--Aquí se inserta el form-->
+
+<form id="send-message">
+    <div class="form">
+        <div class="to">
+            <select name="to" id="to">
+                <option value="" disabled selected hidden>Destinatario:</option>
+                <option value="Erick">Erick</option>
+                <option value="Irma">Irma</option>
+                <option value="Hugo">Hugo</option>
+                <option value="Alex">Alex</option>
+                <option value="Joel">Joel</option>
+                <option value="Jesus">Jesus</option>
+                <option value="Tomas">Tomas</option>
+                <option value="Edgardo">Edgardo</option>
+                <option value="Alberto">Alberto</option>
+            </select>
+        </div>
+        <div class="message">
+            <input type="text" placeholder="Mensaje ...">
+        </div>
+        <div>
+            <div onclick="writeNewPost()">Enviar</div>
+        </div>
+    </div>
+</form>
+
+
+
+<!--  Fin del Form-->
      
 
 </body>
 </html>
-
-
-
