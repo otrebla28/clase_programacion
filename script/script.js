@@ -1,13 +1,13 @@
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyAOjJh5tLTxrrSMMcmzg10hQLHAPJInAjk",
-    authDomain: "chatapp-2a11f.firebaseapp.com",
-    databaseURL: "https://chatapp-2a11f.firebaseio.com",
-    projectId: "chatapp-2a11f",
-    storageBucket: "chatapp-2a11f.appspot.com",
-    messagingSenderId: "157134947168",
-    appId: "1:157134947168:web:3304e879a09e45931a5405",
-    measurementId: "G-PCW5869LNL"
+    apiKey: "AIzaSyBQxF15lOBk4qejuvnw9h-4yLe48Xe20NE",
+    authDomain: "chatapp-98d00.firebaseapp.com",
+    databaseURL: "https://chatapp-98d00.firebaseio.com",
+    projectId: "chatapp-98d00",
+    storageBucket: "chatapp-98d00.appspot.com",
+    messagingSenderId: "1017162347060",
+    appId: "1:1017162347060:web:472317d8d5adac4e491061",
+    measurementId: "G-0GYGF64HTC"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
