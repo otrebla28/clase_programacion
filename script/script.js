@@ -55,11 +55,15 @@ divs.setAttribute('class', "status");
     //divtd.textContent = doc.data().timestamp;
     divtd.textContent = doc.data().timestamp.toDate().toLocaleString();
     divs.textContent="1";
-    document.querySelector("body").appendChild(div);
+    document.querySelector(".conver").appendChild(div);
 }
+//----------Cargando información de la base de datos firebase----------
 //Se generan dos variables para hacer el filtro de información
-const fromto = db.collection('chat').where('to', '==', 'Edgardo');
-const tofrom = db.collection('chat').where('from', '==', 'Edgardo');
+function filtro(){
+document.querySelector(".conver").innerHTML="";  
+filtro_ = document.getElementById("to").value;
+const fromto = db.collection('chat').where('to', '==', filtro_);
+const tofrom = db.collection('chat').where('from', '==', filtro_);
 
 //Se trae la colección de la base de datos con to=persona indicada
 fromto.get()
@@ -79,38 +83,39 @@ fromto.get()
     });
 
   });
- 
+ //----------Finaliza la carga de información de la base de datos firebase----------
+}
 
   //Ahora vamos a escribir en la base de datos
-  function insert(){
-    var referencia = db.collection('chat');
-    //alert("si entro");
-        const fr = "Hugo";
+  function writeNewPost(){
+    var coleccion = db.collection('chat');
+        
+        const de = "Hugo";
         var para = "";
         var mensaje = "";
-        var f = new Date();
-        //document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
- 
+        var fech = new Date();
+        
         para = document.getElementById("to").value;
         mensaje = document.getElementById("message").value;
-        
-        referencia.add({
-            from:fr,
+        document.getElementById("message").value="";
+        alert('Entrando a la funciión para guardar datos'+para+' '+mensaje);
+        coleccion.add({
+            from:de,
             message:mensaje,
-            timestamp:f,
+            timestamp:fech,
             to:para,
         }) .then(function(docRef) {
-            console.log("Document successfully written!");
-            //document.querySelector('.rowc').appendChild(divrow3);
+            console.log("Se gusrdó con éxito");
+           
             db.collection("chat").doc(docRef.id).get().then(function(doc){
-                //console.log(doc.id);
+             
                 renderChat(doc)});
         })
         .catch(function(error) {
-            console.error("Error writing document: ", error);
+            console.error("Error al escribir en la base de datos ", error);
         });
-    
-
+        
+        
 }
   //hasta aquí la función para escribir en la base de datos
 
@@ -133,12 +138,9 @@ function duplicate(){
     console.log(str_html) //grabar en consola
     document.querySelector('.copy-'+i).innerHTML += str_html;
    }
-  
-
- }
-
-
 }
+}
+
 //Esta función activa DIV estados "como seleccionado"
 // y elimina la selección del resto
 function activetab(renglon){
@@ -170,10 +172,9 @@ div.onclick=function(){
     //Aquí es donde Erick creó la magia completita
     //solo llama a la función activetab y le envía el parametro
     //contenido en el dataview
-
     activetab(div.dataset.view);
-  
-    
+
+     
 };
 });
 /*

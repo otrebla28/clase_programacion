@@ -44,7 +44,39 @@
   <!--Fila de chats-->
 <div id="copychats" class="copy"> 
     <div class="copy-0">
-        <div class="row"> 
+     <!--Aquí se inserta el form-->
+
+<form id="send-message">
+    <div class="form">
+        <div class="to">
+            <select name="to" id="to" onchange="filtro()">
+                <option value="Destinatario" >Destinatario:</option>
+                <option value="Erick">Erick</option>
+                <option value="Irma">Irma</option>
+                <option value="Hugo">Hugo</option>
+                <option value="Alex">Alex</option>
+                <option value="Joel">Joel</option>
+                <option value="Jesus">Jesus</option>
+                <option value="Tomas">Tomas</option>
+                <option value="Edgardo">Edgardo</option>
+                <option value="Alberto">Alberto</option>
+            </select>
+        </div>
+        <div class="message">
+            <input id="message" type="text" placeholder="Mensaje ...">
+        </div>
+        <div>
+            <div onclick="writeNewPost()">Enviar</div>
+        </div>
+    </div>
+</form>
+
+
+
+<!--  Fin del Form-->
+
+<div class="conver" >
+       <!-- <div class="row"> 
             <div class="icon">
                 <img src="img/black-power-button-1428134_640.png" height="30px" width="30px" alt="icono">
             </div>
@@ -59,8 +91,9 @@
                     </div>
                     
                 </div>
-        </div> 
+        </div> -->
     </div>
+ </div>   
 </div> 
 <!--Fin de la Fila de chats-->
 
@@ -106,36 +139,7 @@
     </div> <!--Fin de la Fila de llamadas-->
 </div>
 </div> 
-<!--Aquí se inserta el form-->
 
-<form id="send-message">
-    <div class="form">
-        <div class="to">
-            <select name="to" id="to">
-                <option value="" disabled selected hidden>Destinatario:</option>
-                <option value="Erick">Erick</option>
-                <option value="Irma">Irma</option>
-                <option value="Hugo">Hugo</option>
-                <option value="Alex">Alex</option>
-                <option value="Joel">Joel</option>
-                <option value="Jesus">Jesus</option>
-                <option value="Tomas">Tomas</option>
-                <option value="Edgardo">Edgardo</option>
-                <option value="Alberto">Alberto</option>
-            </select>
-        </div>
-        <div class="message">
-            <input type="text" placeholder="Mensaje ...">
-        </div>
-        <div>
-            <div onclick="writeNewPost()">Enviar</div>
-        </div>
-    </div>
-</form>
-
-
-
-<!--  Fin del Form-->
      
 
 </body>
